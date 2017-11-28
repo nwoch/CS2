@@ -4,8 +4,8 @@
 
 public class IntPoint2D implements IIntPoint2D {
 
-  public int x;
-  public int y;
+  private int x;
+  private int y;
 
   // Constructor
   public IntPoint2D(int x, int y) {
