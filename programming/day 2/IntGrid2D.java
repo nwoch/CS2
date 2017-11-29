@@ -56,8 +56,8 @@ public class IntGrid2D implements IIntGrid2D {
 
      // Gets the coordinate for the lower right most location
      public IIntPoint2D getLowerRightCorner() {
-       IntPoint2D upper_right = new IntPoint2D(lr_x, lr_y);
-       return upper_right;
+       IntPoint2D lower_right = new IntPoint2D(lr_x, lr_y);
+       return lower_right;
      }
 
 }
