@@ -1,6 +1,6 @@
 
 
-// A class that implement a doubly-linked list. Both head and tail cells are null.
+// A class that implements a doubly-linked list. Both head and tail cells are null.
 
 public class DoubleLinkList<T> implements IList<T> {
 

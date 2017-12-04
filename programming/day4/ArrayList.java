@@ -1,6 +1,6 @@
 
 
-// A class that implement a List backed by an array that is resized as needed
+// A class that implements a List backed by an array that is resized as needed
 
 public class ArrayList<T> implements IList<T> {
 
