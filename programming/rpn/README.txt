@@ -24,11 +24,12 @@ RPNValueToken.java - Representation for a value
 RPNOpToken.java    - Representation for an operator
 IQueue.java        - Interface to hold the sequence of operations
 IStack.java        - Interface for the operand stack
-OverFlowException.java      - Exception for over filling a data structure		
+OverFlowException.java      - Exception for over filling a data structure
 UnderFlowException.java     - Exception for over emptying a data structure
 BadExpressionException.java - Exception for leftover tokens in the calculator
 UnknownOpException.java     - Exception for using an unknown operator
 RingQueue.class      - A compiled ring queue
 LinkStack.class      - A compiled link based stack
 LinkStack$Link.class - A compiled link implementation for the stack
-
+Queue.java           - A class that represents a fixed-length array queue
+Stack.java           - A class that represents a fixed-length array stack
