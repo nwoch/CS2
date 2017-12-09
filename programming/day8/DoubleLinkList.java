@@ -77,7 +77,7 @@ public class DoubleLinkList<T> implements IList<T> {
       curr = curr.getNext();
     }
     if (curr == tail) {
-      curr = curr.getPrev();
+      curr = head;
     }
     return curr.getValue();
   }
