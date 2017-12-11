@@ -13,7 +13,6 @@ public class BSTree<K extends Comparable<K>,V> implements IDict<K, V> {
   public BSTree() {
     curr_cell = null;
     root = null;
-    //root.setParent(null);
     size = 0;
     array = (K[]) new Comparable[0];
   }
@@ -26,7 +25,7 @@ public class BSTree<K extends Comparable<K>,V> implements IDict<K, V> {
       return null;
     }
     if (fetch(k) == null) {
-      if (k.compareTo(curr_cell.getKey()) == -1) {
+      if (k.compareTo(curr_cell.getKey()) < 0) {
         curr_cell.setLeft(new_cell);
       }
       else {
@@ -122,6 +121,7 @@ public class BSTree<K extends Comparable<K>,V> implements IDict<K, V> {
     return traverse(root);
   }
 
+  // Pre-order traversal of tree
   public int traverse(DictLink<K,V> node) {
     array[size] = root.getKey();
     size++;
@@ -135,7 +135,7 @@ public class BSTree<K extends Comparable<K>,V> implements IDict<K, V> {
   public V fetch(K k) {
     curr_cell = root;
     while (!curr_cell.getKey().equals(k)) {
-      if (k.compareTo(curr_cell.getKey()) == -1) {
+      if (k.compareTo(curr_cell.getKey()) < 0) {
         if (curr_cell.getLeft() == null) {
           return null;
         }
