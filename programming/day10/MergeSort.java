@@ -4,8 +4,6 @@
 
 public class MergeSort<T extends Comparable> implements ISort<T> {
 
-
-
   public MergeSort() {
   }
 
@@ -37,7 +35,7 @@ public class MergeSort<T extends Comparable> implements ISort<T> {
 
 
   // Splits array into halves
-  public T[] split(T[] in) { 
+  public T[] split(T[] in) {
     if (in.length > 1) {
       int middle = (int) Math.round((double) in.length / 2);
       T[] a = (T[]) new Comparable[middle];
