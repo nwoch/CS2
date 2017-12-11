@@ -121,7 +121,7 @@ public class BSTree<K extends Comparable<K>,V> implements IDict<K, V> {
     return traverse(root);
   }
 
-  // Pre-order traversal of tree
+  // Pre-order traversal of the tree
   public int traverse(DictLink<K,V> node) {
     array[size] = root.getKey();
     size++;
