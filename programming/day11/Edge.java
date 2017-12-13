@@ -34,9 +34,14 @@ public class Edge<N, W> implements IEdge<N, W> {
   // Edges are equal when the node instances are exactly the same; i.e. this.src==o.src
   // and this.dst == o.dst
   public boolean equals(Object o) {
-    IEdge<N, W> e = (IEdge<N, W>) o;
-    if (this.getSource() == e.getSource() && this.getDestination() == e.getDestination()) {
-      return true;
+    try {
+      IEdge<N, W> e = (IEdge<N, W>) o;
+      if (this.getSource() == e.getSource() && this.getDestination() == e.getDestination()) {
+        return true;
+      }
+    }
+    catch (Exception e) {
+      System.out.println("ERROR: " + e);
     }
     return false;
   }

@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Graph files are line based. Node names have type String and edge weights have
  * type Double. Fields on the line are separated by ':' and there is no extra white space.
  */
-public class DiGraphReader<N, W> implements IGraphReader<N, W> {
+public class DiGraphReader implements IGraphReader {
     // Fields needed for the Graph Reader should be added here
 
     /**

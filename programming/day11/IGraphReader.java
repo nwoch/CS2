@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 /**
  * Interface for classes that read graphs from files.
  */
-public interface IGraphReader<N, W> {
+public interface IGraphReader {
     /**
      * Reads in a file and instantiates the graph
      * @param filename the file to read
