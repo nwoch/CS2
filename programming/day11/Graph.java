@@ -5,7 +5,6 @@
 public class Graph<N, W> implements IGraph<N, W> {
 
   private INode<N>[] nodes;
-  private INode<N>[] neighbors;
   private IEdge<N, W>[] edges;
   private int size;
   private int size2;
@@ -14,7 +13,6 @@ public class Graph<N, W> implements IGraph<N, W> {
     size = 0;
     size2 = 0;
     nodes = (INode<N>[]) new INode[1];
-    neighbors = (INode<N>[]) new INode[2];
     edges = (IEdge<N, W>[]) new IEdge[1];
   }
 
@@ -25,6 +23,14 @@ public class Graph<N, W> implements IGraph<N, W> {
 
   // Gets an array of the neighbors of a node
   public INode<N>[] getNeighbors(INode<N> n) {
+    int neighbors_size = getEdgesFrom(n).length + getEdgesTo(n).length;
+    INode<N>[] neighbors = (INode<N>[]) new INode[neighbors_size];
+    for (int i = 0; i < getEdgesFrom(n).length; i++) {
+      neighbors[i] = getEdgesFrom(n)[i].getDestination();
+    }
+    for (int i = getEdgesFrom(n).length; i < neighbors_size; i++) {
+      neighbors[i] = getEdgesTo(n)[i - getEdgesFrom(n).length].getSource();
+    }
     return neighbors;
   }
 
