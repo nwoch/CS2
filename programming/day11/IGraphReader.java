@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 
 /**
- * Interface for classes that read graphs from files.
+ * Interface for classes that read graphs from files
  */
 public interface IGraphReader {
     /**

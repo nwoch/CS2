@@ -35,7 +35,7 @@ public class DiGraphReader implements IGraphReader {
         Scanner scanner = new Scanner(graph).useDelimiter(":|\\n");
         Scanner scanner2 = new Scanner(graph).useDelimiter(":|\\n");
 
-        // Parse the lines. If a line does not have exactly 3 fields, ignore the line
+        // Parse the lines. If a line does not have exactly 3 fields, ignore the line.
         // For each line, add the nodes and edge
         while (scanner.hasNextLine()) {
           if (scanner.findInLine("(\\w+):(\\w+):") instanceof String) {

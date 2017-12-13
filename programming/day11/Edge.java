@@ -30,9 +30,9 @@ public class Edge<N, W> implements IEdge<N, W> {
     return weight;
   }
 
-  // Tests for equality of two edges
+  // Tests for equality of two edges.
   // Edges are equal when the node instances are exactly the same; i.e. this.src==o.src
-  // and this.dst == o.dst
+  // and this.dst == o.dst.
   public boolean equals(Object o) {
     try {
       IEdge<N, W> e = (IEdge<N, W>) o;
