@@ -42,21 +42,25 @@ public class DiGraphReader implements IGraphReader {
             scanner.nextLine();
             String value1 = scanner2.next();
             String value2 = scanner2.next();
-            INode<String> source = new Node<String>(value1);
-            INode<String> destination = new Node<String>(value2);
+            INode<String> source = new Node<String>(null);
+            INode<String> destination = new Node<String>(null);
             for (int i = 0; i < r.getNodeSet().length; i++) {
-              if (r.getNodeSet()[i] == source) {
-                value_1++;
-              }
-              if (r.getNodeSet()[i] == destination) {
-                value_2++;
+              if (r.getNodeSet()[i] != null) {
+                if (r.getNodeSet()[i].getValue().equals(value1)) {
+                  source = r.getNodeSet()[i];
+                  value_1++;
+                }
+                if (r.getNodeSet()[i].getValue().equals(value2)) {
+                  destination = r.getNodeSet()[i];
+                  value_2++;
+                }
               }
             }
             if (value_1 == 0) {
-              r.addNode(value1);
+              source = r.addNode(value1);
             }
             if (value_2 == 0) {
-              r.addNode(value2);
+              destination = r.addNode(value2);
             }
             value_1 = 0;
             value_2 = 0;
