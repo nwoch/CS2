@@ -16,7 +16,7 @@ Node.java          - A class for a node in a graph
 IEdge.java         - An interface for edges used by IGraph instances
 Edge.java          - A class for an edge in a graph
 IGraphReader.java  - An interface for reading in graph files
-DiGraphReader.java - This file isn't included, please include your day11 implementation
+DiGraphReader.java - A class that is capable of reading in a graph file from disk
 ISearcher.java     - An interface for classes that provide graph searches.
 graphfile.cs2      - A simple graph file for a basic test
 DepthFirstSearcher.java - A class for searching graphs by depth first
