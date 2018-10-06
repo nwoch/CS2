@@ -4,6 +4,8 @@ Implementations of various data structures and algorithms in Java as well as the
 
 ## Directories
 
+### Programming
+
 day1 - 2D Point
 
 day2 - 2D grid
